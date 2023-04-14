@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Here](https://your-solution-url.com)
-- Live Site URL: [Here](https://your-live-site-url.com)
+- Solution URL: [Here](https://github.com/maiger/fem-huddle-landing-page-with-single-introductory-section)
+- Live Site URL: [Here](https://maiger.github.io/fem-huddle-landing-page-with-single-introductory-section/)
 
 ## My process
 
