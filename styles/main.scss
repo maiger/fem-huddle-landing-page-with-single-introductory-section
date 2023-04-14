@@ -1,0 +1,138 @@
+@import "./breakpoints.scss";
+@import "./setup.scss";
+
+body {
+  background-color: var(--color-primary-1);
+  background-image: url(../images/bg-desktop.svg);
+  background-size: cover;
+
+  @include md {
+    background-image: url(../images/bg-mobile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+main {
+  max-width: 100rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include md {
+    padding: 0 3rem;
+  }
+}
+
+.logo {
+  width: 15rem;
+  margin-bottom: 4rem;
+}
+
+.container {
+  display: flex;
+
+  @include md {
+    flex-direction: column;
+  }
+
+  .illustration {
+    width: 50%;
+    object-fit: contain;
+
+    @include md {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .text {
+    &__container {
+      width: 50%;
+      margin: 3rem;
+
+      @include md {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 3rem 0;
+      }
+    }
+
+    &__title {
+      font-size: var(--text-heading-size-1);
+      color: var(--color-neutral-white);
+      margin-bottom: 2rem;
+
+      @include md {
+        font-size: var(--text-heading-size-2);
+        text-align: center;
+      }
+    }
+
+    &__description {
+      font-family: var(--text-sans-serif-font-2);
+      font-size: var(--text-para-size);
+      color: var(--color-neutral-white);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+
+      @include md {
+        text-align: center;
+      }
+    }
+
+    &__btn-register {
+      width: 12rem;
+      padding: 1rem 3rem;
+      border-radius: 50px;
+      border: none;
+      box-shadow: 5px 5px 10px hsla(257, 64%, 13%, 0.6);
+      color: var(--color-primary-1);
+      background-color: var(--color-neutral-white);
+      cursor: pointer;
+      transition: all 0.2s;
+
+      @include md {
+        width: 20rem;
+        margin-bottom: 3rem;
+      }
+
+      &:hover {
+        color: var(--color-neutral-white);
+        background-color: var(--color-primary-2);
+      }
+    }
+  }
+}
+
+.share {
+  &__container {
+    align-self: end;
+    margin-bottom: 1rem;
+
+    @include md {
+      align-self: center;
+    }
+  }
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    margin: 0.75rem;
+    color: var(--color-neutral-white);
+    border-radius: 50%;
+    border: 1px solid var(--color-neutral-white);
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--color-primary-2);
+      border-color: var(--color-primary-2);
+    }
+  }
+}
